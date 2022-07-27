@@ -76,10 +76,22 @@
 
                         // alert(position);
                         console.log(position);
+                        console.log(position.coords.latitude);
+                        console.log(position.coords.longitude);
 
 
-                        // var locAPI = "http://maps.googleapis.com/maps/geocode/json?latlng="+position.coords.latitude+","+
-                        // position.coords.longitude+"$sensor=true";
+                        alert(position);
+                        alert(position.coords.latitude);
+                        alert(position.coords.longitude);
+
+                        document.getElementById('pos').value = position
+                        document.getElementById('lat').value = position.coords.latitude
+                        document.getElementById('lng').value = position.coords.longitude
+                        document.getElementById('pos').innerHTML = position
+                        document.getElementById('lat').innerHTML = position.coords.latitude
+                        document.getElementById('lng').innerHTML = position.coords.longitude
+                            // var locAPI = "http://maps.googleapis.com/maps/geocode/json?latlng="+position.coords.latitude+","+
+                            // position.coords.longitude+"$sensor=true";
 
                         // // THIS IS WORKING BUT COORDINATES ARE NOT COORECT
                         // var locAPI1 = "https://maps.googleapis.com/maps/api/geocode/json?latlng="+position.coords.latitude+","+
@@ -150,6 +162,11 @@
 
     </div>
 
+    <div>
+        <p id="pos"> </p>
+        <p id="lat"> </p>
+        <p id="lng"> </p>
+    </div>
 
 
 
